@@ -32,6 +32,7 @@ include '../layout/header.php';
                 <th>Telefone</th>
                 <th>Criado em</th>
                 <th>Atualizado em</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +48,7 @@ include '../layout/header.php';
                     echo "<td>" . $row["telefone"] . "</td>";
                     echo "<td>" . date('d/m/Y H:i:s', strtotime($row["criado_em"])) . "</td>";
                     echo "<td>" . date('d/m/Y H:i:s', strtotime($row["atualizado_em"])) . "</td>";
-                    echo "<td><a href='editar.php?id=" . $row["id"] . "'>Editar</a> | <a href='deletar.php?id=" . $row["id"] . "'>Deletar</a></td>";
+                    echo "<td><a href='editar.php?id=" . $row["id"] . "'>Editar</a> | <a class='deletar' href='deletar.php?id=" . $row["id"] . "'>Deletar</a></td>";
                     echo "</tr>";
                 }
             } else {
